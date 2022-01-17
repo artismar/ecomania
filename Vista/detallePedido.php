@@ -35,25 +35,25 @@
     <div class="col">
         <div class="row">
             <div class="col-12">
-                <h5>¡Este es el detalle de la compra de, <span style="color: green;"><?php echo $compra->getUsuario()->getUsNombre();?></span>!</h5>
+                <h1>¡Este es el detalle de la compra de <span style="color: green;"><?php echo $compra->getUsuario()->getUsNombre();?></span>!</h1>
             </div>
             <div class="col-12 mt-5">
                 <h6>Informacion del usuario</h6>
                 <p>
-                    Nombre: <?php echo $compra->getUsuario()->getUsNombre();?><br>
-                    Email: <?php echo $compra->getUsuario()->getUsMail();?><br>
+                    Nombre: <span class="infoPedido"><?php echo $compra->getUsuario()->getUsNombre();?></span><br>
+                    Email: <span class="infoPedido"><?php echo $compra->getUsuario()->getUsMail();?></span><br>
                 </p>
             </div>
             <div class="col-12 mt-5">
                 <h6>Informacion del pedido</h6>
                 <p>
-                    Estado: <?php echo $compraEstado[0]->getCompraEstadoTipo()->getCetDescripcion();?><br>
-                    Pedido realizado: <?php echo $compraEstado[0]->getCeFechaIni();?><br>
-                    Pedido finalizado: <?php echo $fechaFin;?><br>
+                    Estado: <span class="infoPedido"><?php echo $compraEstado[0]->getCompraEstadoTipo()->getCetDescripcion();?></span><br>
+                    Pedido realizado: <span class="infoPedido"><?php echo $compraEstado[0]->getCeFechaIni();?></span><br>
+                    Pedido finalizado: <span class="infoPedido"><?php echo $fechaFin;?></span><br>
                 </p>
             </div>
             <div class="col-12 mt-5">
-                <h6>Articulos pedidos</h6>
+                <h6>Pedido</h6>
                 <table class="table">
                     <thead>
                         <tr>
@@ -67,7 +67,7 @@
                     <tbody>
                         <?php
                             if (count($compraItems)>0){
-                                $num = 0;
+                                $num = 1;
                                 $totalCarrito = 0;
                                 foreach ($compraItems as $item) {
                                     $total = $item->getProducto()->getProPrecio()*$item->getCiCantidad();
@@ -94,8 +94,10 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-12 mt-3">
-                <p>Total a pagar: $<?php echo $totalCarrito;?></p>
+            <div class="row justify-content-end">
+                <div class="col-2 mt-3 text-center">
+                    <p id="infoTotal"><b>Total $<?php echo $totalCarrito;?></b></p>
+                </div>
             </div>
             <div class="col-12 mt-5">
                 <a href="<?php echo $url;?>" class='btn btn-primary'>Volver</a>
@@ -103,9 +105,6 @@
         </div>
     </div>
 </div>
-
-
-
 
 
 

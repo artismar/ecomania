@@ -2,10 +2,27 @@ body{
     background-color: rgb(196, 196, 184);
 }
 
+b{
+    font-weight: 500;
+}
+
+h1{
+    font-size: 1.5em;
+}
+
+span.infoPedido{
+    color: rgb(24, 82, 24);
+}
+
 table a{
     color: green;
 }
 
 table a:hover{
     color: rgb(16, 168, 16);
+}
+
+#infoTotal{
+    border: solid 1px;
+    padding: 2px
 }

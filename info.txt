@@ -1,0 +1,6 @@
+Ecomania - Tienda online de productos sustentables.
+
+// Cuentas precreadas para el login
+    -- Roles: Administrador, deposito y cliente --
+        Cuenta: admin@ecomania.com
+        Password: admin123

@@ -1,0 +1,24 @@
+PRONTAS CORRECCIONES
+
+    1. Edicion del perfil de una cuenta: // editPerfil.php
+        - Validacion de los datos.
+        - El boton "Guardar" se ponga disponible cuando haya una modificacion en los inputs text.
+        - Agregar opcion de "Deshabilitar cuenta".
+            + Si la cuenta tiene rol "Administrador" y es la unica cuenta con este rol disponible: NO se podra deshabilitar hasta que se haga otra cuenta administrador.
+        - Si es administrador poder agregarse o quitarse roles inferiores.
+
+    2. Gestion de productos [Rol: Deposito]
+        - Poder modificar el stock directo desde la tabla.
+        - Poner un search para encontrar un producto rapidamente.
+
+FUTURAS CORRECCIONES
+
+    1. COMUNICACION ASINCRONICA
+        Utilizar este metodo en varias secciones para mejor experiencia de usuario.
+        
+        - Corregir metodo de edicion de menus [Rol: Administrador]
+            No actualiza
+
+    2. Organizar listado de pedidos en la vista del administrador/vendedor.
+        - Poder filtrar para ver los pedidos cancelados/aceptados/enviados.
+        - Poder filtrar para ver los pedidos realizados por x cliente.
