@@ -1,5 +1,9 @@
 body{
-    background-color: rgb(196, 196, 184);
+    background-color: #f7f7f7;
+}
+
+*, ::after, ::before{
+    box-sizing: border-box;
 }
 
 b{
@@ -25,4 +29,16 @@ table a:hover{
 #infoTotal{
     border: solid 1px;
     padding: 2px
+}
+
+.form-signin{
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-signup{
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
 }

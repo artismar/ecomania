@@ -45,15 +45,20 @@ class Session{
         $usuarios = new AbmUsuario();
         $datos['usmail'] = $_SESSION['usmail'];
         $usuario = $usuarios->buscar($datos);
-        if (count($usuario) > 0 and $usuario[0]->getUsPass() == $_SESSION['uspass']){
-            $valido = true;
-            unset($_SESSION['usmail']);
-            unset($_SESSION['uspass']);
-            $_SESSION['idusuario'] = $usuario[0]->getId();
-            $this->iniciarRolActual();
+        if (count($usuario) > 0){
+            if ($usuario[0]->getUsPass() == $_SESSION['uspass']){
+                $valido = true;
+                unset($_SESSION['usmail']);
+                unset($_SESSION['uspass']);
+                $_SESSION['idusuario'] = $usuario[0]->getId();
+                $this->iniciarRolActual();
+            } else {
+                session_destroy();
+                $this->setMsjOperacion('Los datos ingresados son incorrectos.');
+            }
         } else {
             session_destroy();
-            $this->setMsjOperacion('Los datos ingresados son incorrectos');
+            $this->setMsjOperacion('El Email ingresado no esta registrado.');
         }
         return $valido;
     }
