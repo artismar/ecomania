@@ -1,0 +1,44 @@
+body{
+    background-color: #f7f7f7;
+}
+
+*, ::after, ::before{
+    box-sizing: border-box;
+}
+
+b{
+    font-weight: 500;
+}
+
+h1{
+    font-size: 1.5em;
+}
+
+span.infoPedido{
+    color: rgb(24, 82, 24);
+}
+
+table a{
+    color: green;
+}
+
+table a:hover{
+    color: rgb(16, 168, 16);
+}
+
+#infoTotal{
+    border: solid 1px;
+    padding: 2px
+}
+
+.form-signin{
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-signup{
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
