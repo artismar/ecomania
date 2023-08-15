@@ -1,4 +1,4 @@
-Ecomania - Tienda online de productos sustentables.
+Ecomania - Tienda de productos sustentables.
 
 // Cuentas precargadas para el login
     -- Roles: Administrador, deposito y cliente --
